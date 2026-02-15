@@ -8,7 +8,7 @@ Automatically fold function bodies so you can actually see your code structure.
 - [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter) with parsers installed for your languages:
 
 ```vim
-:TSInstall ruby python lua javascript rust
+:TSInstall ruby python lua javascript rust nix
 ```
 
 Inspired by [this article](https://matklad.github.io/2024/10/14/missing-ide-feature.html) from matklad - the idea is simple: function signatures are way more useful than function bodies when you're reading code. So let's fold the bodies by default.
@@ -27,6 +27,7 @@ Inspired by [this article](https://matklad.github.io/2024/10/14/missing-ide-feat
 - JavaScript
 - Rust
 - PHP
+- Nix
 
 PRs welcome for more languages - the queries are pretty simple.
 
