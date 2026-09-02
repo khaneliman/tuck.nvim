@@ -124,12 +124,8 @@ function M.apply_folds(bufnr)
   end
   vim.b[bufnr].tuck_initialized = true
 
-  vim.schedule(function()
-    if vim.api.nvim_buf_is_valid(bufnr) and vim.api.nvim_get_current_buf() == bufnr then
-      vim.wo.foldlevel = 0
-      vim.cmd('silent! normal! zM')
-    end
-  end)
+  vim.wo.foldlevel = 0
+  vim.cmd('silent! normal! zM')
 end
 
 function M.reset_folds(bufnr)

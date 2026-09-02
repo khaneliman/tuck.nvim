@@ -21,11 +21,7 @@ local function setup_autocmds()
     group = augroup,
     callback = function(args)
       if config.options.enabled then
-        vim.schedule(function()
-          if vim.api.nvim_buf_is_valid(args.buf) then
-            fold.apply_folds(args.buf)
-          end
-        end)
+        fold.apply_folds(args.buf)
       end
     end,
   })
